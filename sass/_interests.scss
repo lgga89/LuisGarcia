@@ -1,0 +1,291 @@
+/*ACERCA DE MI */
+.description {
+  padding-bottom: 50px;
+  .about__title {
+    @include titulo;
+  }
+  .about {
+    text-align: center;
+
+    .about__img-perfil {
+      text-align: center;
+      .about__img {
+        width: 20%;
+        border-radius: 50%;
+      }
+    }
+    .about__texto {
+      @include texto;
+    }
+  }
+
+  /* INTERESES Y AFICCIONES*/
+
+  .interests__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .interests {
+      width: 100%;
+
+      text-align: center;
+      .interests__title {
+        @include titulo;
+      }
+      .interests__texto {
+        /*@extend .about__texto;*/
+        @include texto;
+        text-align: left;
+      }
+    }
+    /*HABILIDADES*/
+    .abilities {
+      width: 100%;
+
+      .abilities__title {
+        @include titulo;
+      }
+      .abilities__texto {
+        @include texto;
+      }
+    }
+  }
+
+  .abilities__courses {
+    padding: 20px;
+    .abilities__courses-name {
+      letter-spacing: 0.2rem;
+      @include data_courses;
+    }
+    .abilities__level {
+      background-color: #1a1a1a;
+      height: 15px;
+      padding: 5px;
+      width: 100%;
+      border-radius: 5px;
+      .abilities__percentage-html {
+        @include porcentaje_html;
+      }
+      .orange {
+        @include animation;
+        background: orange;
+      }
+
+      .abilities__percentage-css {
+        @include porcentaje_css;
+      }
+      .blue {
+        @include animation;
+        background: rgb(0, 76, 255);
+      }
+
+      .abilities__percentage-filmora {
+        @include porcentaje_filmora;
+      }
+      .turquoise {
+        @include animation;
+        background: rgb(0, 255, 255);
+      }
+
+      .abilities__percentage-magix {
+        @include porcentaje_magix;
+      }
+      .blue__clean {
+        @include animation;
+        background: rgb(26, 67, 119);
+      }
+      .abilities__percentage-office {
+        @include porcentaje_office;
+      }
+      .orange__clean {
+        @include animation;
+        background: rgb(255, 219, 15);
+      }
+    }
+  }
+  .abilities__button {
+    width: 100%;
+    text-align: center;
+    .button {
+      @include botton;
+      background: transparent;
+      border: 3px solid $_color_habilidades;
+      color: $_color_habilidades;
+      padding: 10px 60px;
+    }
+    .btn__descarga {
+      background: $_color_habilidades;
+      color: $_color_white;
+    }
+  }
+}
+
+/*DATOS*/
+.data {
+  text-align: left;
+  .data__knowledge {
+    list-style: none;
+    .data__texto {
+      @include sub_titulo;
+    }
+    .data__texto-info {
+      display: block;
+      font-family: "poppins-regular", sans-serif;
+      color: $_color_texto_gris;
+      font-size: 15px;
+      margin: 5px 10px 20px 10px;
+    }
+  }
+}
+
+/*-----MEDIA----*/
+@media (min-width: 320px) {
+  .description {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 480px) {
+  .description {
+    padding: 0 30px;
+    .about__title {
+      @include titulo--title;
+    }
+    .about {
+      .about__texto {
+        @include texto--txt;
+      }
+    }
+  }
+  .description {
+    .interests__container {
+      .interests {
+        .interests__title {
+          @include titulo--title;
+        }
+        .interests__texto {
+          @include texto--txt;
+        }
+      }
+      .data {
+        padding: 0 10px;
+      }
+      .abilities {
+        .abilities__title {
+          @include titulo--title;
+        }
+        .abilities__texto {
+          @include texto--txt;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    @include container;
+    .about {
+      display: flex;
+      align-items: center;
+      .about__img-perfil {
+        .about__img {
+          width: 50%;
+        }
+      }
+      .about__texto {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .description {
+    padding: 100px 80px;
+    .interests__container {
+      display: flex;
+      flex-direction: row;
+      .interests {
+        width: 50%;
+      }
+      .abilities {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.description {
+  .about__title {
+    font-size: 20px;
+  }
+  .about {
+    .about__texto {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .description {
+    .about__title {
+      font-size: 30px;
+    }
+    .about {
+      .about__texto {
+        font-size: 40px;
+      }
+    }
+    .interests__container {
+      .interests {
+        .interests__title {
+          font-size: 30px;
+        }
+        .interests__texto {
+          font-size: 30px;
+        }
+        .data {
+          .data__knowledge {
+            .data__texto {
+              font-size: 30px;
+            }
+            .data__texto-info {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .description {
+    .interests__container {
+      .abilities {
+        .abilities__title {
+          font-size: 30px;
+        }
+        .abilities__texto {
+          font-size: 30px;
+        }
+        .abilities__courses-name {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .description {
+    .abilities__button {
+      .button {
+        font-size: 30px;
+        padding: 20px 80px;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}

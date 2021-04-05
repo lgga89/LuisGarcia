@@ -1,0 +1,31 @@
+.header {
+  background: $_color_blue_oscuro;
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    .header__logo {
+      text-align: center;
+      .header_enlace-logo {
+        .header__img {
+          width: 50px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.header__nav-menu {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  .header__enlace-menu {
+    margin: 10px;
+    color: $_color_white_w;
+    text-decoration: none;
+  }
+}

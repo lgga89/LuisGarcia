@@ -1,0 +1,164 @@
+.cover {
+  background-image: url(/img/portada.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+  .cover__page {
+    text-align: center;
+    padding: 100px 10px;
+    opacity: 0.85;
+    background: $_color_portada_transparente;
+
+    .cover__greetings {
+      margin: 0;
+      color: $_color_crimson;
+      letter-spacing: 2px;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+    }
+    .cover__name {
+      font-size: 35px;
+      line-height: 1.071;
+      color: $_color_white;
+      font-family: "Poppins", sans-serif;
+      margin: 10px 0px;
+    }
+    .cover__name-professional {
+      color: $_color_white;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 0.2rem;
+      line-height: 1.5;
+      font-size: 13px;
+      font-weight: none;
+      vertical-align: middle;
+    }
+    /*REDES SOCIALES*/
+    .cover__networks {
+      display: flex;
+      justify-content: center;
+
+      .cover__networks-enlace {
+        margin: 50px 0;
+        color: $_color_white;
+        font-size: 25px;
+        span {
+          margin: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  @include botton;
+  padding: 20px 40px;
+}
+.stroke {
+  background: transparent;
+  border: 3px solid $_color_blue_oscuro;
+}
+
+/*--media--480---*/
+@media (min-width: 480px) {
+  .cover__page {
+    padding: 40px 0;
+    .cover__container {
+      padding: 20px;
+      .cover__greetings {
+        letter-spacing: 1px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/*--media-768----*/
+@media (min-width: 768px) {
+  .cover__page {
+    padding: 40px 0;
+    .cover__container {
+      padding: 100px 0 10px;
+      .cover__name {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+/*-----media 1024px---*/
+@media (min-width: 1024px) {
+  .cover__page {
+    .cover__container {
+      .cover__greetings {
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+      .cover__name {
+        font-size: 80px;
+      }
+      .cover__name-professional {
+        font-size: 20px;
+      }
+    }
+    .cover__networks {
+      .cover__networks-enlace {
+        margin: 0 50px;
+        span {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cover__page {
+    .cover__container {
+      .cover__greetings {
+        font-size: 25px;
+      }
+    }
+  }
+  .cover {
+    .cover__page {
+      .cover__networks {
+        .cover__networks-enlace {
+          span {
+            margin: 0 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .cover {
+    .cover__page {
+      padding: 80px;
+      .cover__container {
+        .cover__greetings {
+          font-size: 50px;
+        }
+        .cover__name {
+          font-size: 120px;
+        }
+      }
+    }
+  }
+  .cover {
+    .cover__page {
+      .cover__networks {
+        .cover__networks-enlace {
+          span {
+            margin: 0 200px;
+            font-size: 50px;
+          }
+        }
+      }
+    }
+  }
+}

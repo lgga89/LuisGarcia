@@ -1,0 +1,149 @@
+/*----LABORAL*/
+.laboral__education {
+  background: $_color_gris_fondo;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.laboral {
+  .laboral__title {
+    @include titulo;
+    margin: 0;
+  }
+  .laboral__title-sub {
+    @include sub_titulo;
+  }
+  .laboral__texto {
+    @include texto;
+    text-align: center;
+  }
+}
+/*----EDUCACION----*/
+.education {
+  margin: 10px;
+  .education__title {
+    @include titulo;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .education__profesional {
+    .education__profesional-title {
+      @include titulo;
+      color: $_color_habilidades;
+      text-align: left;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    .education__profesional-univ {
+      @include texto;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .education__texto {
+      @include texto;
+      padding: 0 20px;
+      margin: 10px 0;
+    }
+    .education_data {
+      @include texto;
+      padding: 0 20px;
+      margin: 10px 0;
+    }
+  }
+}
+/*-------MEDIA---480-------*/
+@media (min-width: 480px) {
+  .laboral__education {
+    padding: 60px 30px;
+    .laboral {
+      .laboral__title {
+        @include titulo--title;
+      }
+      .laboral__texto {
+        @include texto--txt;
+      }
+    }
+  }
+
+  .education {
+    .education__title {
+      @include titulo--title;
+    }
+    .education__profesional {
+      .education__profesional-title,
+      .education__profesional-univ,
+      .education__texto,
+      .education_data,
+      .education__texto,
+      .education_data {
+        @include texto--txt;
+      }
+    }
+  }
+}
+/*---media 768px-----*/
+@media (min-width: 768px) {
+  .laboral__education {
+    @include container;
+    .laboral {
+      .laboral__title-sub {
+        @include sub--titulo;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .laboral__education {
+    .laboral {
+      padding: 60px 80px;
+      .laboral__title {
+        font-size: 20px;
+      }
+      .laboral__title-sub {
+        font-size: 35px;
+        font-family: "Poppins";
+      }
+      .laboral__texto {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.laboral__education {
+  .education {
+    .education__title {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .laboral__education {
+    .laboral {
+      .laboral__title {
+        font-size: 30px;
+      }
+      .laboral__title-sub {
+        font-size: 50px;
+      }
+      .laboral__texto {
+        font-size: 30px;
+      }
+    }
+    .education {
+      .education__title {
+        font-size: 30px;
+      }
+      .education__profesional {
+        .education__profesional-univ {
+          padding: 0 40px;
+        }
+        .education__profesional-title {
+          font-size: 30px;
+        }
+        .education__texto,
+        .education_data {
+          padding: 0 40px;
+        }
+      }
+    }
+  }
+}

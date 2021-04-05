@@ -1,0 +1,182 @@
+/* TEXTO DE CONTACTO*/
+.contact {
+  background: $_color_black_fondo;
+  .contact__main {
+    margin: 10px;
+    .contact__title {
+      padding-top: 50px;
+      @include titulo;
+    }
+    .contact__title-sub {
+      @include sub_titulo;
+      color: $_color_white;
+    }
+    .contact__texto {
+      @include texto;
+      text-align: center;
+      color: $_color_texto;
+    }
+  }
+}
+/*FORMULARIO - CONTACTO*/
+.formulario {
+  text-align: center;
+
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    .form {
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      @include sub_titulo;
+      font-size: 12px;
+      text-align: left;
+      padding: 20px;
+    }
+    .button {
+      background: $_color_crimson;
+      border: none;
+      padding: 20px 100px;
+      margin: 50px 0;
+    }
+  }
+}
+
+/*INFORMACION*/
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  .information__location,
+  .information__email,
+  .information__phone {
+    margin: 0 20px;
+    padding: 10px 0px;
+    .icon-location,
+    .icon-email,
+    .icon-phone {
+      color: $_color_crimson;
+      font-size: 30px;
+    }
+    .information__title {
+      @include titulo;
+      margin: 20px 0 10px;
+      font-size: 15px;
+    }
+    .information__texto {
+      @include texto;
+      margin: 0;
+    }
+  }
+}
+/*------MEDIA--------*/
+@media (min-width: 480px) {
+  .contact {
+    .contact__container {
+      .contact__main {
+        .contact__title {
+          @include titulo--title;
+        }
+        .contact__texto {
+          @include texto--txt;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    .contact__container {
+      padding: 50px;
+      .contact__main {
+        .contact__title {
+          @include titulo--title;
+        }
+        .contact__texto {
+          @include texto--txt;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    .contact__container {
+      padding: 50px 90px;
+      .contact__title {
+        font-size: 20px;
+      }
+      .contact__title-sub {
+        font-size: 35px;
+        font-family: "Poppins";
+      }
+      .contact__texto {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact {
+    .contact__container {
+      .contact__main {
+        .contact__title {
+          font-size: 30px;
+        }
+        .contact__title-sub {
+          font-size: 50px;
+        }
+        .contact__texto {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .contact {
+    .contact__container {
+      .formulario {
+        .form__container {
+          .form {
+            font-size: 25px;
+            padding-bottom: 60px;
+            font-weight: 200;
+          }
+          .button {
+            font-size: 30px;
+            padding: 40px 90px;
+            letter-spacing: 5px;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    .contact__container {
+      .information {
+        padding-top: 80px;
+        .information__location,
+        .information__email,
+        .information__phone {
+          width: 20%;
+          margin: 0 90px;
+        }
+        .information__title,
+        .information__texto {
+          font-size: 25px;
+          letter-spacing: 2px;
+        }
+        .icon {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}

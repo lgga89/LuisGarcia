@@ -1,0 +1,115 @@
+.draft {
+  .draft__title {
+    @include titulo;
+  }
+  .draft__title_sub {
+    @include sub_titulo;
+    margin: 0;
+  }
+  .draft__texto {
+    @include texto;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+.draft__portafolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .draft__img {
+    width: 250px;
+  }
+}
+
+/*----MEDIAS--------------*/
+@media (min-width: 480px) {
+  .draft {
+    .draft__container {
+      padding: 0 30px;
+      .draft__title {
+        letter-spacing: 5px;
+      }
+      .draft__texto {
+        font-size: 18px;
+      }
+    }
+
+    .draft__portafolio {
+      .draft__img {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .draft {
+    .draft__container {
+      padding: 0 60px;
+      @include container;
+      .draft__title_sub {
+        @include sub--titulo;
+      }
+    }
+    .draft__portafolio {
+      padding: 0 0 90px;
+      .draft__img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .draft {
+    .draft__portafolio {
+      .draft__img {
+        width: 450px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .draft {
+    .draft__container {
+      .draft__title {
+        font-size: 20px;
+      }
+      .draft__title_sub {
+        font-size: 35px;
+        font-family: "Poppins";
+      }
+      .draft__texto {
+        font-size: 20px;
+      }
+    }
+    .draft__portafolio {
+      .draft__img {
+        width: 550px;
+      }
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .draft {
+    .draft__portafolio {
+      .draft__img {
+        width: 650px;
+      }
+    }
+    .draft__container {
+      padding: 0 200px;
+      .draft__title {
+        font-size: 30px;
+      }
+      .draft__title_sub {
+        font-size: 50px;
+      }
+      .draft__texto {
+        font-size: 30px;
+      }
+    }
+  }
+}

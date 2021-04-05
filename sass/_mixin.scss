@@ -1,0 +1,154 @@
+@mixin titulo {
+  margin: 40px 0 20px;
+  color: $_color_crimson;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+@mixin sub_titulo {
+  font-family: "poppins", sans-serif;
+  color: $_color_habilidades;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+
+  text-align: center;
+}
+
+@mixin botton {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  color: $_color_white;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 15px;
+  letter-spacing: 2px;
+}
+@mixin texto {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: $_color_texto_gris;
+  font-weight: 200;
+  padding: 10px;
+  line-height: 1.8;
+}
+
+@mixin data_courses {
+  font-family: "poppins", sans-serif;
+  color: $_color_habilidades;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin: 30px 0px 0px 10px;
+}
+
+@mixin porcentaje_html {
+  display: inline-block;
+  background: #ccc;
+  width: 50%;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+@mixin porcentaje_css {
+  display: inline-block;
+  background: #ccc;
+  width: 50%;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+@mixin porcentaje_filmora {
+  display: inline-block;
+  background: #ccc;
+  width: 60%;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+
+@mixin porcentaje_magix {
+  display: inline-block;
+  background: #ccc;
+  width: 80%;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+@mixin porcentaje_office {
+  display: inline-block;
+  background: #ccc;
+  width: 80%;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+
+@mixin animation {
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  animation: animate-stripes 3s linear infite;
+}
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
+}
+.shine {
+  position: relative;
+  &::after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 3px;
+    animation: animate-shine 2s ease-out infinite;
+  }
+}
+@keyframes animate-shine {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    width: 95%;
+  }
+}
+
+/*------MEDIAS- 480px----------*/
+@mixin titulo--title {
+  letter-spacing: 5px;
+}
+@mixin texto--txt {
+  font-size: 18px;
+}
+
+/*----MEDIAS 768PX------*/
+@mixin sub--titulo {
+  font-size: 25px;
+}
+@mixin container {
+  padding: 20px 50px;
+}
